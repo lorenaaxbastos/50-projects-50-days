@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: inherit;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+html {
+    font-size: 62.5%; /* 10 px / 16px */
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    background-color: #98ddcc;
+}
+
+form {
+    position: relative;
+    width: 40%;
+}
+
+.heading--primary {
+    font-size: 6rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1;
+    color: #3f3f3f;
+}
+
+.search--input {
+    font-family: inherit;
+    color: #3f3f3f;
+    border: none;
+    border-radius: 1000px;
+    background-color: #fff;
+    width: 4rem;
+    height: 4rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.search--input:hover:not(.search--active),
+form:has(.search--btn:hover) .search--input:not(.search--active) {
+    transform: translate(-50%, -50%) scale(1.5);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.search--input::selection {
+    color: #fff;
+    background-color: #4e9281;
+}
+
+.search--input::placeholder {
+    color: #fff;
+}
+
+.search--input:focus {
+    outline: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.search--input.search--active::placeholder {
+    color: #b8b8b8;
+}
+
+.search--active {
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+.search--btn {
+    border: none;
+    color: #4e9281;
+    background-color: transparent;
+    font-size: 2.2rem;
+    margin-top: 3px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.search--active + .search--btn {
+    left: 92%;
+}
+
+.search--active + .search--btn:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+@media (max-width: 1200px) {
+    .heading--primary {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .heading--primary {
+        font-size: 4.5rem;
+    }
+
+    form {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading--primary {
+        font-size: 5rem;
+    }
+
+    form {
+        width: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    .heading--primary {
+        font-size: 4rem;
+    }
+
+    form {
+        width: 80%;
+    }
+}
