@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+
+        <title>Rotating navigation</title>
+    </head>
+    <body>
+        <div class="nav-btn">
+            <span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
+        </div>
+        <div class="nav-btn nav-btn--rotated">
+            <span>&nbsp;</span><span>&nbsp;</span>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li class="list-item">
+                    <a href="#" class="list-link">Home</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">Featured articles</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">About</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <div
+                    class="img-cover"
+                    style="
+                        background: url('https://img.freepik.com/free-photo/fantastic-seascape-with-ripples_1232-424.jpg?t=st=1736275314~exp=1736278914~hmac=173a49bd8fbc492b39a3d91da8499978b5700bcd814b32950fb4b966d1b87254&w=900');
+                        background-position: center;
+                        background-size: cover;
+                    "
+                ></div>
+
+                <h1 class="heading--primary">The Endless Blue</h1>
+                <p class="text author">Text by chatGPT</p>
+                <p class="text">
+                    The ocean, vast and mysterious, stretches beyond the horizon
+                    like an eternal canvas of blue. Its waves dance to the
+                    rhythm of the wind, whispering secrets from the depths.
+                    Beneath the surface lies a vibrant world teeming with life,
+                    from shimmering schools of fish to the graceful movements of
+                    sea turtles and the majestic presence of whales.
+                </p>
+                <p class="text">
+                    The sea has a way of captivating the soul, offering both
+                    serenity and adventure. Its tides connect distant shores,
+                    carrying dreams and stories across the globe. Whether
+                    standing on the shore or diving into its depths, the ocean
+                    invites us to explore its beauty and respect its power, a
+                    timeless reminder of nature’s boundless wonder.
+                </p>
+            </article>
+            <article>
+                <div
+                    class="img-cover"
+                    style="
+                        background: url('https://img.freepik.com/free-photo/sunny-meadow-landscape_1112-134.jpg?t=st=1736277056~exp=1736280656~hmac=d6fa75d799c0dd92282c56a21e683ac27caa5a8e33d13dcec575ce15e7bf4a33&w=900');
+                        background-position: center;
+                        background-size: cover;
+                    "
+                ></div>
+
+                <h1 class="heading--primary">Whispers of the Countryside</h1>
+                <p class="text author">Text by chatGPT</p>
+                <p class="text">
+                    A farm is a world of simple beauty, where rolling fields
+                    meet the open sky. The golden hues of wheat sway in the
+                    breeze, and the gentle clucking of chickens mingles with the
+                    distant lowing of cattle. Life here moves with the rhythm of
+                    nature, from the first light of dawn to the peaceful glow of
+                    twilight.
+                </p>
+                <p class="text">
+                    Amidst the barns and pastures, the farm is a haven of hard
+                    work and tranquility. It's a place where the earth offers
+                    its abundance and the seasons dictate the pace. Every corner
+                    holds a story of growth and resilience, reminding us of the
+                    timeless bond between humanity and the land.
+                </p>
+            </article>
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>
