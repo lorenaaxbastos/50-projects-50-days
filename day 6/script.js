@@ -1,24 +1,19 @@
 "use strict";
 
-const sections2col = document.querySelectorAll(".cols-2");
+const sections = document.querySelectorAll(".cols-2");
+const triggerBottom = (window.innerHeight / 5) * 3;
 
-const observer = new IntersectionObserver(
-    (sections) => {
-        sections.forEach((section) => {
-            if (section.isIntersecting) {
-                section.target.classList.add("animated");
-            }
-        });
-    },
-    {
-        root: null,
-        rootMargin: window.matchMedia("(max-width: 576px)").matches
-            ? "40px"
-            : "200px",
-        threshold: 0.1,
-    }
-);
+const checkSections = function () {
+    sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        console.log(triggerBottom, sectionTop);
 
-sections2col.forEach((section) => {
-    observer.observe(section);
-});
+        if (sectionTop < triggerBottom) {
+            section.classList.add("animated");
+        } else {
+            section.classList.remove("animated");
+        }
+    });
+};
+
+window.addEventListener("scroll", checkSections);
