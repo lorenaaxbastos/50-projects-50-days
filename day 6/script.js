@@ -6,7 +6,6 @@ const triggerBottom = (window.innerHeight / 5) * 3;
 const checkSections = function () {
     sections.forEach((section) => {
         const sectionTop = section.getBoundingClientRect().top;
-        console.log(triggerBottom, sectionTop);
 
         if (sectionTop < triggerBottom) {
             section.classList.add("animated");
