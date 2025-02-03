@@ -1,0 +1,141 @@
+:root {
+    --color-vi: #94126c;
+    --color-jinx: #21819a;
+    --color-arcane: #8b6f3c;
+    --color-arcane-light: #e6deba;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: inherit;
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+html {
+    font-size: 62.5%; /* 10 px / 16px */
+}
+
+.heading--primary {
+    font-size: 10rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.heading--primary:hover {
+    color: transparent;
+    background: linear-gradient(
+        to right,
+        var(--color-arcane),
+        var(--color-arcane-light),
+        var(--color-arcane)
+    );
+    -webkit-background-clip: text;
+}
+
+.text {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.hero {
+    height: 80vh;
+    display: flex;
+    position: relative;
+}
+
+.hero__heading {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: transparent;
+    background: linear-gradient(
+        to right,
+        var(--color-arcane),
+        var(--color-arcane-light),
+        var(--color-arcane)
+    );
+    -webkit-background-clip: text;
+    font-size: 3rem;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.hero__side--left {
+    background: url(jinx.jpg);
+    background-position: right;
+    color: var(--color-jinx);
+    justify-content: flex-end;
+}
+
+.hero__side--left-covered {
+    background: linear-gradient(to right, rgba(33, 129, 154, 0.9), #fff),
+        url(jinx.jpg);
+}
+
+.hero__side--right {
+    background: url(vi.jpg);
+    background-position: left;
+    color: var(--color-vi);
+}
+
+.hero__side--right-covered {
+    background: linear-gradient(to left, rgba(148, 18, 108, 0.9), #fff),
+        url(vi.jpg);
+    background-position: right;
+}
+
+.hero__side {
+    width: 50%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero__side--grayed-out {
+    filter: saturate(0);
+}
+
+@media (max-width: 1200px) {
+    .heading--primary {
+        font-size: 6rem;
+    }
+
+    .hero__heading {
+        font-size: 2rem;
+    }
+
+    .text {
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+    .heading--primary {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .heading--primary {
+        font-size: 5rem;
+    }
+}
