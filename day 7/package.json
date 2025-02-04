@@ -1,0 +1,14 @@
+{
+    "name": "day-7",
+    "version": "1.0.0",
+    "main": "script.js",
+    "scripts": {
+        "compile:sass": "node-sass main.scss style.css -w"
+    },
+    "author": "Lorena Bastos",
+    "license": "ISC",
+    "description": "split screen project based on Arcane",
+    "devDependencies": {
+        "node-sass": "^9.0.0"
+    }
+}
