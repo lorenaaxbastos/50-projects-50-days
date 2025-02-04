@@ -212,9 +212,20 @@ html {
 @media (max-width: 576px) {
   .heading--primary {
     font-size: 5rem; }
+  .text {
+    font-size: 1.4rem; }
   .hero__side--left .hero__content {
     right: 0;
     text-align: center; }
+  .hero__side--left .heading--primary,
+  .hero__side--left .text {
+    text-align: center; }
+  .hero__side--left:not(.hero__side--covered) {
+    background-position: 27%; }
   .hero__side--right .hero__content {
     left: 0;
-    text-align: center; } }
+    text-align: center; }
+  .hero__side--right:not(.hero__side--covered) {
+    background-position: 80%; }
+  .hero__side:not(.hero__side--covered) .hero__content {
+    padding: 3rem; } }

@@ -391,11 +391,24 @@ html {
         font-size: 5rem;
     }
 
+    .text {
+        font-size: 1.4rem;
+    }
+
     .hero__side {
         &--left {
             .hero__content {
                 right: 0;
                 text-align: center;
+            }
+
+            .heading--primary,
+            .text {
+                text-align: center;
+            }
+
+            &:not(.hero__side--covered) {
+                background-position: 27%;
             }
         }
 
@@ -403,6 +416,16 @@ html {
             .hero__content {
                 left: 0;
                 text-align: center;
+            }
+
+            &:not(.hero__side--covered) {
+                background-position: 80%;
+            }
+        }
+
+        &:not(.hero__side--covered) {
+            .hero__content {
+                padding: 3rem;
             }
         }
     }
