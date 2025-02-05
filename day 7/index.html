@@ -17,10 +17,12 @@
     <body>
         <section class="hero">
             <h1 class="hero__heading">Which side are you on?</h1>
-            <div class="hero__side hero__side--left hero__side--covered">
+            <div
+                class="hero__side hero__side--fast-transition hero__side--left hero__side--covered"
+            >
                 <article class="hero__content">
                     <h2 class="heading--primary">#teamJinx</h2>
-                    <p class="text">
+                    <p class="text text--slow-transition">
                         Jinx, the chaotic yet brilliant mastermind of Arcane,
                         captivates with her unhinged creativity, unmatched
                         agility, and explosive combat style. Her unpredictable
@@ -33,12 +35,20 @@
                         make her an unforgettable icon for those who embrace the
                         beautifully unpredictable.
                     </p>
+                    <button
+                        aria-label="Change teams"
+                        class="btn btn--slow-transition"
+                    >
+                        <span class="btn__label">Change teams</span>
+                    </button>
                 </article>
             </div>
-            <div class="hero__side hero__side--right hero__side--covered">
+            <div
+                class="hero__side hero__side--fast-transition hero__side--right hero__side--covered"
+            >
                 <article class="hero__content">
                     <h2 class="heading--primary">#teamVi</h2>
-                    <p class="text">
+                    <p class="text text--slow-transition">
                         Vi, the unstoppable brawler of Arcane, embodies raw
                         strength, unwavering determination, and a fierce sense
                         of justice. Her resilience and combat prowess make her a
@@ -50,6 +60,12 @@
                         an inspiring figure for those who admire strength,
                         responsibility, and a heart that never gives up.
                     </p>
+                    <button
+                        aria-label="Change teams"
+                        class="btn btn--slow-transition"
+                    >
+                        <span class="btn__label">Change teams</span>
+                    </button>
                 </article>
             </div>
         </section>
