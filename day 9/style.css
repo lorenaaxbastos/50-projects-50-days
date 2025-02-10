@@ -3,8 +3,6 @@
     --color-aqua: rgb(34, 171, 155);
     --color-aqua-dark: rgb(27, 131, 119);
     --color-white: #fff;
-    --x: 0;
-    --y: -100vh;
 }
 
 *,
@@ -74,27 +72,16 @@ main {
 }
 
 .emoji {
+    display: inline-block;
     position: absolute;
     left: 0;
     bottom: 0;
-    transform: translate(0, 100%);
+    transition: all 3s linear;
+    z-index: -1;
 }
 
 .animated {
-    animation-name: bottomToTop;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
-}
-
-@keyframes bottomToTop {
-    0% {
-        transform: translate(0, 100%);
-    }
-
-    100% {
-        transform: translate(var(--x), var(--y));
-    }
+    transform: translateY(-120vh);
 }
 
 @media (max-width: 992px) {
