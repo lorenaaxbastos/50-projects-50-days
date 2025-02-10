@@ -3,7 +3,7 @@
 const btns = document.querySelectorAll(".btn");
 const audios = document.querySelectorAll(".audio");
 const audioBoxes = document.querySelectorAll(".audio-box");
-const emojis = ["👏", "💀", "😨", "🥳", "🏆", "❌"];
+const emojis = ["👏", "👎", "😨", "🥳", "🏆", "❌"];
 
 const minMaxRandom = (min, max) => Math.random() * (max - min) + min;
 
@@ -17,14 +17,12 @@ const emojiGenerator = (i, amount, audioDuration) => {
 
     for (let j = 0; j < amount; j++) {
         const fontSize = minMaxRandom(1.5, 6);
-
         const maxAllowedDuration = audioDuration;
         const duration = minMaxRandom(1, maxAllowedDuration);
         const maxAllowedDelay = audioDuration - duration;
         const delay = minMaxRandom(0, maxAllowedDelay);
 
         const emojiEl = document.createElement("span");
-
         emojiEl.classList.add("emoji");
         emojiEl.textContent = emojis[i];
         emojiEl.style.cssText = `
@@ -39,7 +37,7 @@ const emojiGenerator = (i, amount, audioDuration) => {
                 ${minMaxRandom(minBezier, maxBezier)}, 
                 ${minMaxRandom(minBezier, maxBezier)}
             );
-        ;`;
+        `;
 
         audioBox.appendChild(emojiEl);
         emojisArray.push(emojiEl);
@@ -59,14 +57,15 @@ const emojiGenerator = (i, amount, audioDuration) => {
 
 btns.forEach((btn, i) => {
     btn.addEventListener("click", () => {
-        for (let j = 0; j < audios.length; j++) {
-            if (i === j) continue;
-            else if (!audios[j].paused) {
-                audios[j].pause();
-                const emojisEl = document.querySelectorAll(".emoji");
-                emojisEl.forEach((emoji) => (emoji.style.display = "none;"));
+        audios.forEach((audio) => {
+            if (!audio.paused) {
+                audio.pause();
+                audio.currentTime = 0;
             }
-        }
+            document
+                .querySelectorAll(".emoji")
+                .forEach((emoji) => emoji.remove());
+        });
 
         if (!audios[i]) return;
 
